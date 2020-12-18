@@ -4,14 +4,16 @@
 # I did this project to learn how to use Flask and Redis
 # and I decided to release the code as it may be useful
 # to others who are also learning.
-
+#
 # Documentation
 # =============
 # • Flask
 #   https://flask.palletsprojects.com/en/master/
 # • Bootstrap (v5)
 #   https://getbootstrap.com/docs/5.0/getting-started/introduction/
-
+# • Redis
+#   https://redis.io/documentation
+#
 # Redis methods used
 # ==================
 # • StrictRedis (Constructor)

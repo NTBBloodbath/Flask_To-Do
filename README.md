@@ -11,12 +11,16 @@ to others who are also learning.
 ---
 
 ## Usage
+> **New to Redis? Look at the [Documentation](https://redis.io/documentation).**
+> 
+> **New to Flask? Look at the [Documentation](https://flask.palletsprojects.com/en/master/).**
+> 
+> **New to Bootstrap v5? Look at the [Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/).**
+
 ### Installation
 #### System-side
 This project requires Redis to function properly.
 If you don't have it installed, please [Download Redis](https://redis.io/download).
-
-> **New to Redis? Look at the [Documentation](https://redis.io/documentation).**
 
 #### Python-side
 This project uses `pipenv` to handle its dependencies.
@@ -29,10 +33,6 @@ To install the dependencies use the following command.
 ```sh
 pipenv install
 ```
-
-> **New to Flask? Look at the [Documentation](https://flask.palletsprojects.com/en/master/).**
-> 
-> **New to Bootstrap v5? Look at the [Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/).**
 
 ### Running the server
 First we need to run our redis server

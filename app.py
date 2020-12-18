@@ -14,7 +14,7 @@
 
 # Redis methods used
 # ==================
-# • StrictRedis
+# • StrictRedis (Constructor)
 #   alias of redis.client.Redis
 #   Docs: https://redis-py.readthedocs.io/en/stable/#redis.StrictRedis
 # • FLUSHDB

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div id="index">
+  <div class="jumbotron text-center">
+    <h1 class="title">Your tasks</h1>
+  </div>
+  <div class="container">
+    <ul class="list-group list-group-flush">
+      {% if tasks != [] %}
+        {% for task in tasks %}
+        <li class="list-group-item">{{ task }}</li>
+        {% endfor %}
+        <a class="btn btn-primary mt-3" href="/add" role="button">Do you want to add another task?</a>
+      {% else %}
+        <p>It seems you have nothing to do.</p>
+        <a class="btn btn-primary mt-3" href="/add" role="button">Do you want to add something?</a>
+      {% endif %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

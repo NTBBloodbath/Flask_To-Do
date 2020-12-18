@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div id="delete">
+  <div class="jumbotron text-center">
+    <h1 class="title">Edit your tasks</h1>
+  </div>
+  <div class="container">
+    {% if tasks != [] %}
+      <form action="{{ url_for("edit_or_render") }}" method="post">
+        <select name="task" class="form-select mb-3" aria-label="Select a task">
+          <option selected>Select a task</option>
+          {% for task in tasks %}
+            <option value="{{ task }}">{{ task }}</option>
+          {% endfor %}
+        </select>
+        <input class="form-control mb-3" type="text" minlength="1" name="new_task" placeholder="Enter the new task ..."/>
+        <button class="btn btn-primary mt-3" type="submit">Edit task(s)</button>
+      </form>
+    {% else %}
+      <p>It seems you have nothing to do here.</p>
+      <a class="btn btn-primary mt-3" href="/add" role="button">Do you want to add something?</a>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

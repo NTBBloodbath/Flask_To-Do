@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div id="add">
+  <div class="jumbotron text-center">
+    <h1 class="title">Add new task</h1>
+  </div>
+  <div class="container mt-3">
+    <form action="{{ url_for("add_or_render") }}" method="post">
+      <input class="form-control mb-3" type="text" minlength="1" name="task" placeholder="Enter a new task ..."/>
+      <button class="btn btn-primary mb-3" type="submit">Add task</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

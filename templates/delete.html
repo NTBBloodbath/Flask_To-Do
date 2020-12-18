@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div id="delete">
+  <div class="jumbotron text-center">
+    <h1 class="title">Delete your tasks</h1>
+  </div>
+  <div class="container">
+    {% if tasks != [] %}
+      <form action="{{ url_for("delete_or_render") }}" method="post">
+        {% for task in tasks %}
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="deleteTask" name="{{ task }}">
+            <label class="form-check-label" for="deleteTask">
+              {{ task }}
+            </label>
+          </div>
+        {% endfor %}
+        <button class="btn btn-primary mt-3" type="submit">Delete task(s)</button>
+      </form>
+    {% else %}
+      <p>It seems you have nothing to do here.</p>
+      <a class="btn btn-primary mt-3" href="/add" role="button">Do you want to add something?</a>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
